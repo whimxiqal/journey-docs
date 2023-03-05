@@ -11,15 +11,15 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://whimxiqal.github.io',
+  url: 'https://journey.whimxiqal.net',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/journey-docs/',
+  baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'whimxiqal', // Usually your GitHub org/user name.
-  projectName: 'journey', // Usually your repo name.
+  projectName: 'journey-docs', // Usually your repo name.
   trailingSlash: false,
 
   onBrokenLinks: 'throw',
