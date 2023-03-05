@@ -1,0 +1,21 @@
+.features {
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+  width: 100%;
+}
+
+.feature {
+  padding: 1rem;
+  border: 5px solid transparent;
+  border-radius: 10px;
+}
+
+.feature:hover {
+  border: 5px solid var(--ifm-color-primary);
+}
+
+.featureSvg {
+  height: 200px;
+  width: 200px;
+}
