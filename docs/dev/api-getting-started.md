@@ -50,8 +50,9 @@ dependencies {
 
 To use snapshots, you must add the snapshot repository:
 
-Current API Snapshot Version: **v1.0-SNAPSHOT**
+Current API Snapshot Version: **1.0-SNAPSHOT**
 
+<!-- Uncomment the below badge once we move beyond 1.0, since an erroneous 1.0.0 is blocking the current 1.0 build -->
 <!-- ![Sonatype Nexus (Snapshots)](https://img.shields.io/nexus/s/net.whimxiqal.journey/core-api?label=API%20Snapshot%20Version&server=https%3A%2F%2Fs01.oss.sonatype.org&style=for-the-badge) -->
 
 <Tabs groupId="build-tool">
