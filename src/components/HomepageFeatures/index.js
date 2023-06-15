@@ -30,7 +30,7 @@ const FeatureList = [
     link: '/docs/category/developers',
     description: (
       <>
-        Integrate navigation into your latest projects
+        Integrate Journey's navigation into your latest projects
       </>
     ),
   },
