@@ -50,9 +50,7 @@ dependencies {
 
 To use snapshots, you must add the snapshot repository:
 
-Current API Snapshot Version: **v1.0-SNAPSHOT**
-
-<!-- ![Sonatype Nexus (Snapshots)](https://img.shields.io/nexus/s/net.whimxiqal.journey/core-api?label=API%20Snapshot%20Version&server=https%3A%2F%2Fs01.oss.sonatype.org&style=for-the-badge) -->
+![Sonatype Nexus (Snapshots)](https://img.shields.io/nexus/s/net.whimxiqal.journey/core-api?label=API%20Snapshot%20Version&server=https%3A%2F%2Fs01.oss.sonatype.org&style=for-the-badge)
 
 <Tabs groupId="build-tool">
   <TabItem value="gradle" label="Gradle">

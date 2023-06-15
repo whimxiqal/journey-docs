@@ -1,12 +1,12 @@
 ---
 sidebar_label: 'Tunnels'
-sidebar_position: 4
+sidebar_position: 5
 description: 'Adding custom transportation'
 ---
 
 # Tunnels
 
-A `Tunnel` is a custom connection between any two places on the server that symbolizes a player's ability to travel from one end to the other. If your plugin provides players any sort of custom transportation methods, namely teleportation like custom portals or commands, you should register them. A simple registration for a Bukkit plugin that has custom teleportation commands may look like:
+A `Tunnel` is a custom connection between any two places on the server that symbolizes an [agent](/docs/dev/journey-agent.md)'s ability to travel from one end to the other. If your plugin provides players any sort of custom transportation methods, namely teleportation like custom portals or commands, you should register them. A simple registration for a Bukkit plugin that has custom teleportation commands may look like:
 
 ```java
 
@@ -22,7 +22,7 @@ void onEnable() {
   JourneyBukkitApi journeyBukkit = JourneyBukkitApiProvider.get();
   JourneyApi journey = JourneyApiProvider.get();
 
-  journey.registerTunnels(this.getName(), player -> numberOfTowns(player.uuid())
+  journey.registerTunnels(this.getName(), agent -> numberOfTowns(agent.uuid())
     .entrySet()
     .stream()
     .collect(Collectors.toList(entry -> 

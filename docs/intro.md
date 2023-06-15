@@ -27,6 +27,6 @@ For example, if your Nether world is called `the_nether`, you may type the comma
 
 <img src={PathToNetherScreenshot} style={{margin: '0 10%', width: '80%', borderRadius: 10}} />
 
-Alternatively, you may use the inventory interface with simply `/jt`
+Alternatively, you may use the inventory interface with simply `/jt`.
 
 <img src={GUIScreenshot} style={{margin: '0 10%', width: '80%', borderRadius: 10}} />

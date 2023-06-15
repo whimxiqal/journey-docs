@@ -1,6 +1,6 @@
 ---
 sidebar_label: 'Scopes'
-sidebar_position: 3
+sidebar_position: 4
 description: 'Adding custom destinations'
 ---
 
@@ -39,7 +39,7 @@ journey.registerScope(myScope);
 
 ## `VirtualMap`
 
-`sub-Scopes` and `Destinations` must be added in a `VirtualMap`, which supplies a `Map` given a [`JourneyPlayer`](/docs/dev/journey-player.md). The internal map is keyed by the value's identifier, and the value is either a `Scope` or a `Destination`. 
+`sub-Scopes` and `Destinations` must be added in a `VirtualMap`, which supplies a `Map` given a [`JourneyPlayer`](/docs/dev/journey-agent.md). The internal map is keyed by the value's identifier, and the value is either a `Scope` or a `Destination`. 
 
 The motivation for a wrapper around the map is that there may be some cases where the number of items in the map is very large and would require a good deal of time and memory to load. If this is a concern, then you may manually set the `size()` of a `VirtualMap` and leave the actual data in a `Supplier<Map<>>` to only be loaded if the `size()` is small enough to warrant it. In this way, the items in the map will be provided if requested by the user, but the full map will only be loaded and presented to the user in situations where the total set of options should be limited, like for command completion.
 
