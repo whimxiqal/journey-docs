@@ -99,8 +99,8 @@ const config = {
                 to: '/docs/intro',
               },
               {
-                label: 'Administrators',
-                to: '/docs/category/administrators',
+                label: 'Integrations',
+                to: '/docs/category/integrations',
               },
               {
                 label: 'Developers',
