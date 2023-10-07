@@ -147,6 +147,10 @@ Permissions in Journey are organized by purpose.
 
 > Allows the subject to use the `particle` option of the `trail` navigator with the [navigator flag](/docs/commands#navigator-flag) on search commands
 
+## `journey.flag.navigator.trail.color` {#journey-flag-navigator-trail-color}
+
+> Allows the subject to use the `color` option of the `trail` navigator with the [navigator flag](/docs/commands#navigator-flag) on search commands
+
 ## `journey.flag.navigator.trail.width` {#journey-flag-navigator-trail-width}
 
 > Allows the subject to use the `width` option of the `trail` navigator with the [navigator flag](/docs/commands#navigator-flag) on search commands

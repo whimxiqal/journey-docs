@@ -12,8 +12,8 @@ Integrate Journey with [Citizens](https://wiki.citizensnpcs.co/Citizens_Wiki) by
 
 <img src={CitizensLogo} style={{height: 150, borderRadius: 10}} />
 
-[![JourneyCitizens Downloads](https://img.shields.io/modrinth/dt/journeycitizens?style=for-the-badge)](https://modrinth.com/plugin/journeycitizens)
-[![JourneyCitizens Version](https://img.shields.io/modrinth/v/journeycitizens?style=for-the-badge)](https://modrinth.com/plugin/journeycitizens)
+[![JourneyCitizens Downloads](https://img.shields.io/modrinth/dt/journeycitizens?style=for-the-badge&color=D06262)](https://modrinth.com/plugin/journeycitizens)
+[![JourneyCitizens Version](https://img.shields.io/modrinth/v/journeycitizens?style=for-the-badge&color=D06262)](https://modrinth.com/plugin/journeycitizens)
 
 **[Download](https://modrinth.com/plugin/journeycitizens) |
 [Source](https://github.com/whimxiqal/journey/tree/main/integrations/citizens) |

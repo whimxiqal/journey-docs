@@ -1,7 +1,7 @@
 ---
-sidebar_label: 'Getting Started'
+sidebar_label: "Getting Started"
 sidebar_position: 1
-description: 'Adding Journey as a dependency for your project'
+description: "Adding Journey as a dependency for your project"
 ---
 
 import Tabs from '@theme/Tabs';
@@ -9,13 +9,13 @@ import TabItem from '@theme/TabItem';
 
 # Journey API
 
-Journey has a shared "core" java API library a separate java API component for each platform that Journey runs on. 
+Journey has a shared "core" java API library a separate java API component for each platform that Journey runs on.
 
 To use the Journey API, you must download the dependency using your project's build tool: [Maven](https://maven.apache.org/) or [Gradle](https://docs.gradle.org/). The platform-specific libraries have a few helpful tools, but you may not need them because most of the API resides the shared library.
 
 ## Declaring Dependencies
 
-![Maven Central](https://img.shields.io/maven-central/v/net.whimxiqal.journey/core-api?label=API%20Version&style=for-the-badge)
+![Maven Central](https://img.shields.io/maven-central/v/net.whimxiqal.journey/core-api?label=API%20Version&style=for-the-badge&color=D06262)
 
 <Tabs groupId="build-tool">
   <TabItem value="gradle" label="Gradle">
@@ -50,7 +50,7 @@ dependencies {
 
 To use snapshots, you must add the snapshot repository:
 
-![Sonatype Nexus (Snapshots)](https://img.shields.io/nexus/s/net.whimxiqal.journey/core-api?label=API%20Snapshot%20Version&server=https%3A%2F%2Fs01.oss.sonatype.org&style=for-the-badge)
+![Sonatype Nexus (Snapshots)](https://img.shields.io/nexus/s/net.whimxiqal.journey/core-api?label=API%20Snapshot%20Version&server=https%3A%2F%2Fs01.oss.sonatype.org&style=for-the-badge&color=D06262)
 
 <Tabs groupId="build-tool">
   <TabItem value="gradle" label="Gradle">

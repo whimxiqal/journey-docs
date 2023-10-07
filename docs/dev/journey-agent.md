@@ -1,7 +1,7 @@
 ---
-sidebar_label: 'JourneyAgent'
-sidebar_position: 2
-description: 'A class Journey uses to represent a movable entity, like a player'
+sidebar_label: "JourneyAgent"
+sidebar_position: 4
+description: "A class Journey uses to represent a movable entity, like a player"
 ---
 
 # `JourneyAgent`

@@ -184,7 +184,7 @@ go ahead and raise that config value to experience faster search times.
 
 ## `/journey admin cache paths clear` {#journey-admin-cache-paths-clear}
 
-Clear all stored cached paths.
+> Clear all stored cached paths.
 
 See the [`storage.cache.max_cells`](/docs/admin/config#storage) config parameter.
 
@@ -212,10 +212,7 @@ These connections are stored and used for future calculations.
 
 ## Search Flags
 
-Various flags may be appended to the end of a search command to change certain parameters about the search and resulting paths.
-If the value of the flag is a boolean (`true` or `false`), then the presence of the flag will toggle it from the server default.
-For other flags, the value must be specified after an `=` symbol.
-Furthermore, flags can look like `-<flag_name>` or like `-<flag_name>=<value>`.
+Various flags may be appended to the end of a search command to change certain parameters about the search and resulting paths. If the value of the flag is a boolean (`true` or `false`), then the presence of the flag will toggle it from the server default. For other flags, the value must be specified afterwards. So, depending on the flag, they can either be written like `-<flag_name>` or like `-<flag_name> <value>`.
 
 ### Timeout Flag {#timeout-flag}
 
@@ -267,3 +264,24 @@ In most cases, you probably only want to consider places you can get to without 
 Some options may be optionally specified along with a navigator type:
 
 - `-navigator trail {<options>}`
+
+#### Navigator Options
+
+Navigator options may be specified after the navigator type as a comma separated list of elements in the form `<key>:<value>`. All navigator types have the following options with the corresponding expected values:
+
+- `completion-message`: a message to send when you complete navigation (formatted as a [Minimessage](https://docs.advntr.dev/minimessage/index.html))
+- `completion-title`: a title to send when you complete navigation (formatted as a [Minimessage](https://docs.advntr.dev/minimessage/index.html))
+- `completion-subtitle`: a sub-title to send when you complete navigation (formatted as a [Minimessage](https://docs.advntr.dev/minimessage/index.html))
+
+Trail navigators also have the following options:
+
+- `particle`: the particle type used in the trail
+- `color`: the color of the particesl in the trail (only applicable if particle is `redstone`)
+- `width`: the width of the particle trail
+- `density`: the density of the particles in the particle trail
+
+A possible command using navigator options may look like:
+
+```
+/jt home -navigator trail { particle:redstone,color:CFFFB3 }
+```

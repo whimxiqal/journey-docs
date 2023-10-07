@@ -1,8 +1,8 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const lightCodeTheme = require('prism-react-renderer/themes/github')
+const darkCodeTheme = require('prism-react-renderer/themes/dracula')
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -42,8 +42,7 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/journey-docs',
+          editUrl: 'https://github.com/journey-docs',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -84,10 +83,6 @@ const config = {
             label: 'Issues',
             position: 'left',
           },
-          // { TODO enable later
-          //   type: 'docsVersionDropdown',
-          //   position: 'right',
-          // },
         ],
       },
       footer: {
@@ -119,11 +114,11 @@ const config = {
               },
               {
                 label: 'Discussions',
-                href: 'https://github.com/whimxiqal/journey/discussions'
+                href: 'https://github.com/whimxiqal/journey/discussions',
               },
               {
                 label: 'Issues',
-                href: 'https://github.com/whimxiqal/journey/issues'
+                href: 'https://github.com/whimxiqal/journey/issues',
               },
               {
                 label: 'Download',
@@ -132,7 +127,7 @@ const config = {
               {
                 label: 'BStats',
                 href: 'https://bstats.org/plugin/bukkit/Journey/17665',
-              }
+              },
             ],
           },
         ],
@@ -144,9 +139,9 @@ const config = {
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
-        additionalLanguages: ['java', 'gradle']
+        additionalLanguages: ['java', 'gradle'],
       },
     }),
-};
+}
 
-module.exports = config;
+module.exports = config

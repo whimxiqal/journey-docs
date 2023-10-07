@@ -12,8 +12,8 @@ Integrate Journey with [EssentialsX](https://essentialsx.net/) by mdcfe
 
 <img src={EssentialsLogo} style={{height: 150, borderRadius: 10}} />
 
-[![JourneyEssentials Downloads](https://img.shields.io/modrinth/dt/journeyessentials?style=for-the-badge)](https://modrinth.com/plugin/journeyessentials)
-[![JourneyEssentials Version](https://img.shields.io/modrinth/v/journeyessentials?style=for-the-badge)](https://modrinth.com/plugin/journeyessentials)
+[![JourneyEssentials Downloads](https://img.shields.io/modrinth/dt/journeyessentials?style=for-the-badge&color=D06262)](https://modrinth.com/plugin/journeyessentials)
+[![JourneyEssentials Version](https://img.shields.io/modrinth/v/journeyessentials?style=for-the-badge&color=D06262)](https://modrinth.com/plugin/journeyessentials)
 
 **[Download](https://modrinth.com/plugin/journeyessentials) |
 [Source](https://github.com/whimxiqal/journey/tree/main/integrations/essentials) |

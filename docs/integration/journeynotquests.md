@@ -12,8 +12,8 @@ Integrate Journey with [NotQuests](https://www.notquests.com/) by Alessio
 
 <img src={NotQuestsLogo} style={{height: 150, borderRadius: 10}} />
 
-[![JourneyNotQuests Downloads](https://img.shields.io/modrinth/dt/journeynotquests?style=for-the-badge)](https://modrinth.com/plugin/journeynotquests)
-[![JourneyNotQuests Version](https://img.shields.io/modrinth/v/journeynotquests?style=for-the-badge)](https://modrinth.com/plugin/journeynotquests)
+[![JourneyNotQuests Downloads](https://img.shields.io/modrinth/dt/journeynotquests?style=for-the-badge&color=D06262)](https://modrinth.com/plugin/journeynotquests)
+[![JourneyNotQuests Version](https://img.shields.io/modrinth/v/journeynotquests?style=for-the-badge&color=D06262)](https://modrinth.com/plugin/journeynotquests)
 
 **[Download](https://modrinth.com/plugin/journeynotquests) |
 [Source](https://github.com/whimxiqal/journey/tree/main/integrations/notquests) |
