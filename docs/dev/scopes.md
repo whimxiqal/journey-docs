@@ -1,7 +1,7 @@
 ---
-sidebar_label: "Scopes"
+sidebar_label: 'Scopes'
 sidebar_position: 4
-description: "Adding custom destinations"
+description: 'Adding custom destinations'
 ---
 
 import Tabs from '@theme/Tabs';
@@ -13,7 +13,7 @@ A `Scope` contains information about points of interest around your Minecraft se
 
 ## Structure
 
-A `Scope` will also often have some number of `sub-Scope`s, which allow you to define all of your `Destinations` in a tree-like pattern. For example, in [JourneyEssentials](/docs/integration/journeyessentials.md), there is an [Essentials](https://essentialsx.net/) `Scope` that has `sub-Scope`s for "warps" and also for players' "homes". Each of those `sub-Scopes` contain 0 `sub-Scopes` and contain a bunch of `Destinations`.
+A `Scope` will also often have some number of `sub-Scope`s, which allow you to define all of your `Destinations` in a tree-like pattern. For example, in [JourneyEssentials](/docs/integrations/journeyessentials.md), there is an [Essentials](https://essentialsx.net/) `Scope` that has `sub-Scope`s for "warps" and also for players' "homes". Each of those `sub-Scopes` contain 0 `sub-Scopes` and contain a bunch of `Destinations`.
 
 Journey lets you register you own `Scope`, which gets placed just under the Journey-wide `Scope` "root" as a `sub-Scope`. No two `sub-Scope`s or `Destinations` may have the same ID within a `Scope`.
 
