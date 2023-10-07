@@ -7,7 +7,8 @@ sidebar_position: 2
 Journey uses the [Mantle Command Framework](https://github.com/whimxiqal/mantle) to handle command execution. As with other Mantle projects, the entire command framework is summarized in one `.gz` file, which can be found [among the source code](https://github.com/whimxiqal/journey/blob/main/common/src/main/antlr/net/whimxiqal/journey/common/Journey.g4).
 
 All commands are split between two base commands:
-1. `/journey` 
+
+1. `/journey`
 2. `/journeyto`
 
 :::tip
@@ -20,7 +21,7 @@ Command arguments surrounded with `<>` are required parameters. Those surrounded
 
 > Starts a journey to a given destination
 
-- **Permission** - [journey.path.[...]](/docs/admin/permissions#journey-path-gui)
+- **Permission** - [journey.path.[...]](/docs/permissions#journey-path-gui)
 - **Arguments**
   - `name`: The name of the destination/waypoint. If no name is given, a GUI will open
   - [`flags...`](#search-flags)
@@ -29,8 +30,8 @@ The `name` parameter can optionally be a series of names delineated by colons. T
 
 For example, if you set a personal waypoint called `myhome`, you may "journey" to `myhome` using `/journeyto personal:myhome`. To teleport to a player's location, use `/journeyto player:PlayerName`.
 
-In most cases, if the name of a location is unique among other contexts, you may omit the `scope`. 
-So, in the previous example, you may use `/journeyto myhome`, but only if there are no public waypoints or locations from other contexts called `myhome`. 
+In most cases, if the name of a location is unique among other contexts, you may omit the `scope`.
+So, in the previous example, you may use `/journeyto myhome`, but only if there are no public waypoints or locations from other contexts called `myhome`.
 Similarly, as long as there are no waypoints with the same name as a player, you may journey to a player using just `/journeyto PlayerName`.
 
 Scopes include:
@@ -53,7 +54,7 @@ Scopes include:
 
 > Sets a personal waypoint
 
-- **Permission** - [journey.edit.personal](/docs/admin/permissions#journey-edit-personal)
+- **Permission** - [journey.edit.personal](/docs/permissions#journey-edit-personal)
 - **Arguments**
   - `name`: the name of your new waypoint
 
@@ -61,17 +62,17 @@ Scopes include:
 
 > Lists all your personal waypoints
 
-- **Permission** - [journey.path.personal](/docs/admin/permissions#journey-path-personal)
+- **Permission** - [journey.path.personal](/docs/permissions#journey-path-personal)
 - **Arguments**
   - `page`: the page, for paging across many waypoints
 
 ## `/journey waypoint <name> [flags...]` {#journey-waypoint}
 
-> Starts a journey to a personal waypoint 
+> Starts a journey to a personal waypoint
 
 Alternatively, use `/journeyto personal:<name>`.
 
-- **Permission** - [journey.path.personal](/docs/admin/permissions#journey-path-personal)
+- **Permission** - [journey.path.personal](/docs/permissions#journey-path-personal)
 - **Arguments**
   - `name`: the name of your waypoint
   - [`flags...`](#search-flags)
@@ -80,7 +81,7 @@ Alternatively, use `/journeyto personal:<name>`.
 
 > Removes a personal waypoint
 
-- **Permission** - [journey.edit.personal](/docs/admin/permissions#journey-edit-personal)
+- **Permission** - [journey.edit.personal](/docs/permissions#journey-edit-personal)
 - **Arguments**
   - `name`: the name of your waypoint to remove
 
@@ -88,7 +89,7 @@ Alternatively, use `/journeyto personal:<name>`.
 
 > Renames a personal waypoint to something else
 
-- **Permission** - [journey.edit.personal](/docs/admin/permissions#journey-edit-personal)
+- **Permission** - [journey.edit.personal](/docs/permissions#journey-edit-personal)
 - **Arguments**
   - `name`: the name of your waypoint to change
   - `new name`: the new name of your waypoint
@@ -99,7 +100,7 @@ Alternatively, use `/journeyto personal:<name>`.
 
 If no `true` or `false` is specified, it will just toggle the publicity to the opposite state.
 
-- **Permission** - [journey.edit.personal.publicity](/docs/admin/permissions#journey-edit-personal-publicity)
+- **Permission** - [journey.edit.personal.publicity](/docs/permissions#journey-edit-personal-publicity)
 - **Arguments**
   - `name`: the name of your waypoint
 
@@ -107,7 +108,7 @@ If no `true` or `false` is specified, it will just toggle the publicity to the o
 
 > Sets a server waypoint
 
-- **Permission** - [journey.edit.server](/docs/admin/permissions#journey-edit-server)
+- **Permission** - [journey.edit.server](/docs/permissions#journey-edit-server)
 - **Arguments**
   - `name`: the name of the waypoint
 
@@ -115,17 +116,17 @@ If no `true` or `false` is specified, it will just toggle the publicity to the o
 
 > Lists all the server waypoints
 
-- **Permission** - [journey.path.server](/docs/admin/permissions#journey-path-server)
+- **Permission** - [journey.path.server](/docs/permissions#journey-path-server)
 - **Arguments**
   - `page`: the page, for paging across many waypoints
 
 ## `/journey server waypoint <name> [flags...]` {#journey-server-waypoint}
 
-> Starts a journey to a server waypoint 
+> Starts a journey to a server waypoint
 
 Alternatively, use `/journeyto server:<name>`.
 
-- **Permission** - [journey.path.server](/docs/admin/permissions#journey-path-server)
+- **Permission** - [journey.path.server](/docs/permissions#journey-path-server)
 - **Arguments**
   - `name`: the name of the waypoint
   - [`flags...`](#search-flags)
@@ -134,7 +135,7 @@ Alternatively, use `/journeyto server:<name>`.
 
 > Removes a server waypoint
 
-- **Permission** - [journey.edit.server](/docs/admin/permissions#journey-edit-server)
+- **Permission** - [journey.edit.server](/docs/permissions#journey-edit-server)
 - **Arguments**
   - `name`: the name of the waypoint to remove
 
@@ -142,7 +143,7 @@ Alternatively, use `/journeyto server:<name>`.
 
 > Renames a server waypoint to something else
 
-- **Permission** - [journey.edit.server](/docs/admin/permissions#journey-edit-server)
+- **Permission** - [journey.edit.server](/docs/permissions#journey-edit-server)
 - **Arguments**
   - `name`: the name of the waypoint to change
   - `new name`: the new name of the waypoint
@@ -152,8 +153,8 @@ Alternatively, use `/journeyto server:<name>`.
 > Starts a journey to a player or, if the name is given, to one of their public waypoints
 
 - **Permissions**
-  - [journey.path.player.entity](/docs/admin/permissions#journey-path-player-entity) (if no waypoint is specified)
-  - [journey.path.player.waypoints](/docs/admin/permissions#journey-path-player-waypoints) (if a waypoint is specified)
+  - [journey.path.player.entity](/docs/permissions#journey-path-player-entity) (if no waypoint is specified)
+  - [journey.path.player.waypoints](/docs/permissions#journey-path-player-waypoints) (if a waypoint is specified)
 - **Arguments**
   - `player`: the name of the online player
   - `name`: the name of the waypoint
@@ -162,7 +163,7 @@ Alternatively, use `/journeyto server:<name>`.
 
 > Begins debug messaging, either for just the target or for everyone if no target is given
 
-- **Permission** - [journey.admin.debug](/docs/admin/permissions#journey-admin-debug)
+- **Permission** - [journey.admin.debug](/docs/permissions#journey-admin-debug)
 - **Arguments**
   - `target`: the online player who has searches from which you want to receive debug information
 
@@ -175,19 +176,19 @@ Potentially uses a lot of space in your database!
 Journey caches previously calculated paths to speed up search times. This command pre-calculates many of these paths and stores them
 so searches may use them instead of calculating them on the fly.
 
-The config parameter [`storage.cache.max_cells`](/docs/admin/config#storage) lets you set how many cells (blocks) you may store in cache
+The config parameter [`storage.cache.max_cells`](/docs/config#storage) lets you set how many cells (blocks) you may store in cache
 before Journey will start to throw out possible cached paths in an effort to save storage space. If storage space isn't an issue and you are hitting that limit,
 go ahead and raise that config value to experience faster search times.
 
-- **Permission** - [journey.admin.cache](/docs/admin/permissions#journey-admin-cache)
+- **Permission** - [journey.admin.cache](/docs/permissions#journey-admin-cache)
 
 ## `/journey admin cache paths clear` {#journey-admin-cache-paths-clear}
 
-Clear all stored cached paths. 
+> Clear all stored cached paths.
 
-See the [`storage.cache.max_cells`](/docs/admin/config#storage) config parameter.
+See the [`storage.cache.max_cells`](/docs/config#storage) config parameter.
 
-- **Permission** - [journey.admin.cache](/docs/admin/permissions#journey-admin-cache)
+- **Permission** - [journey.admin.cache](/docs/permissions#journey-admin-cache)
 
 ## `/journey admin cache portals clear` {#journey-admin-cache-portals-clear}
 
@@ -200,7 +201,7 @@ You should never have to do this!
 Journey keeps an internal cache of all portal connections. These are added and updated as players usem, so this command is only needed if something breaks.
 Use the [`admin listportals` command](#journey-admin-listportals) to see what portals currently are known to Journey.
 
-- **Permission** - [journey.admin.cache](/docs/admin/permissions#journey-admin-cache)
+- **Permission** - [journey.admin.cache](/docs/permissions#journey-admin-cache)
 
 ## `/journey admin listportals [page]` {#journey-admin-listportals}
 
@@ -211,24 +212,21 @@ These connections are stored and used for future calculations.
 
 ## Search Flags
 
-Various flags may be appended to the end of a search command to change certain parameters about the search and resulting paths.
-If the value of the flag is a boolean (`true` or `false`), then the presence of the flag will toggle it from the server default.
-For other flags, the value must be specified after an `=` symbol.
-Furthermore, flags can look like `-<flag_name>` or like `-<flag_name>=<value>`.
+Various flags may be appended to the end of a search command to change certain parameters about the search and resulting paths. If the value of the flag is a boolean (`true` or `false`), then the presence of the flag will toggle it from the server default. For other flags, the value must be specified afterwards. So, depending on the flag, they can either be written like `-<flag_name>` or like `-<flag_name> <value>`.
 
 ### Timeout Flag {#timeout-flag}
 
 > Declares how many seconds the search will take if a solution is never found
 
-- `-timeout=60` - 60 second timeout
-- `-timeout=180` - 180 second timeout
+- `-timeout 60` - 60 second timeout
+- `-timeout 180` - 180 second timeout
 
 ### Animate Flag {#animate-flag}
 
 > Deploys an animation during the search and declares how many milliseconds the search will wait between calculation steps
 
-- `-animate=10` - 10 millisecond delay
-- `-animate=50` - 50 millisecond delay
+- `-animate 10` - 10 millisecond delay
+- `-animate 50` - 50 millisecond delay
 - `-animate` - animates with server default
 
 ### Fly Flag {#fly-flag}
@@ -236,16 +234,16 @@ Furthermore, flags can look like `-<flag_name>` or like `-<flag_name>=<value>`.
 > Decides whether to consider flying as a viable mode of transport, but only if flight is enabled
 
 - `-fly` - toggles the consideration of flight
-- `-fly=true` - considers flight during the search, but only if flight is already enabled
-- `-fly=false` - does not consider flight during the search
+- `-fly true` - considers flight during the search, but only if flight is already enabled
+- `-fly false` - does not consider flight during the search
 
 ### Door Flag {#door-flag}
 
 > Decides whether iron doors should be considered obstructive
 
 - `-door` - toggles the obstructivity of iron doors
-- `-door=true` - considers iron doors obstructive
-- `-door=false` - considers iron doors unobstructive
+- `-door true` - considers iron doors obstructive
+- `-door false` - considers iron doors unobstructive
 
 ### Dig Flag {#dig-flag}
 
@@ -254,5 +252,36 @@ Furthermore, flags can look like `-<flag_name>` or like `-<flag_name>=<value>`.
 In most cases, you probably only want to consider places you can get to without breaking through blocks.
 
 - `-dig` - toggles the consideration of the digging mode
-- `-dig=true` - considers digging a viable mode of transport
-- `-dig=false` - does not consider digging a viable mode of transport
+- `-dig true` - considers digging a viable mode of transport
+- `-dig false` - does not consider digging a viable mode of transport
+
+### Navigator Flag {#navigator-flag}
+
+> Decides which navigator to use
+
+- `-navigator trail`
+
+Some options may be optionally specified along with a navigator type:
+
+- `-navigator trail {<options>}`
+
+#### Navigator Options
+
+Navigator options may be specified after the navigator type as a comma separated list of elements in the form `<key>:<value>`. All navigator types have the following options with the corresponding expected values:
+
+- `completion-message`: a message to send when you complete navigation (formatted as a [Minimessage](https://docs.advntr.dev/minimessage/index.html))
+- `completion-title`: a title to send when you complete navigation (formatted as a [Minimessage](https://docs.advntr.dev/minimessage/index.html))
+- `completion-subtitle`: a sub-title to send when you complete navigation (formatted as a [Minimessage](https://docs.advntr.dev/minimessage/index.html))
+
+Trail navigators also have the following options:
+
+- `particle`: the particle type used in the trail
+- `color`: the color of the particesl in the trail (only applicable if particle is `redstone`)
+- `width`: the width of the particle trail
+- `density`: the density of the particles in the particle trail
+
+A possible command using navigator options may look like:
+
+```
+/jt home -navigator trail { particle:redstone,color:CFFFB3 }
+```

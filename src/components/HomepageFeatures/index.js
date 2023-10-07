@@ -1,40 +1,28 @@
-import React from 'react';
-import clsx from 'clsx';
-import styles from './styles.module.css';
-import Link from '@docusaurus/Link';
+import React from 'react'
+import clsx from 'clsx'
+import styles from './styles.module.css'
+import Link from '@docusaurus/Link'
 
 const FeatureList = [
   {
     title: 'Introduction',
     Svg: require('@site/static/img/undraw_biking.svg').default,
     link: '/docs/intro',
-    description: (
-      <>
-        Start navigating the server in minutes
-      </>
-    ),
+    description: <>Start navigating your server with Journey</>,
   },
   {
-    title: 'Administrators',
+    title: 'Integrations',
     Svg: require('@site/static/img/undraw_circuit.svg').default,
-    link: '/docs/category/administrators',
-    description: (
-      <>
-        Make adjustments to fit your server's needs
-      </>
-    ),
+    link: '/docs/category/integrations',
+    description: <>Integrate Journey with your other plugins</>,
   },
   {
     title: 'Developers',
     Svg: require('@site/static/img/undraw_programmer.svg').default,
     link: '/docs/category/developers',
-    description: (
-      <>
-        Integrate Journey's navigation into your latest projects
-      </>
-    ),
+    description: <>Use Journey to power your latest project</>,
   },
-];
+]
 
 function Feature({ Svg, title, description, link }) {
   return (
@@ -49,7 +37,7 @@ function Feature({ Svg, title, description, link }) {
         </div>
       </Link>
     </div>
-  );
+  )
 }
 
 export default function HomepageFeatures() {
@@ -63,5 +51,5 @@ export default function HomepageFeatures() {
         </div>
       </div>
     </section>
-  );
+  )
 }

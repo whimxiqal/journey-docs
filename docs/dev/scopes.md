@@ -13,7 +13,7 @@ A `Scope` contains information about points of interest around your Minecraft se
 
 ## Structure
 
-A `Scope` will also often have some number of `sub-Scope`s, which allow you to define all of your `Destinations` in a tree-like pattern. For example, in [JourneyIntegrator](/docs/admin/integration.md), there is an [Essentials](https://essentialsx.net/) `Scope` that has `sub-Scope`s for "warps" and also for players' "homes". Each of those `sub-Scopes` contain 0 `sub-Scopes` and contain a bunch of `Destinations`.
+A `Scope` will also often have some number of `sub-Scope`s, which allow you to define all of your `Destinations` in a tree-like pattern. For example, in [JourneyEssentials](/docs/integrations/journeyessentials.md), there is an [Essentials](https://essentialsx.net/) `Scope` that has `sub-Scope`s for "warps" and also for players' "homes". Each of those `sub-Scopes` contain 0 `sub-Scopes` and contain a bunch of `Destinations`.
 
 Journey lets you register you own `Scope`, which gets placed just under the Journey-wide `Scope` "root" as a `sub-Scope`. No two `sub-Scope`s or `Destinations` may have the same ID within a `Scope`.
 
@@ -39,7 +39,7 @@ journey.registerScope(myScope);
 
 ## `VirtualMap`
 
-`sub-Scopes` and `Destinations` must be added in a `VirtualMap`, which supplies a `Map` given a [`JourneyPlayer`](/docs/dev/journey-agent.md). The internal map is keyed by the value's identifier, and the value is either a `Scope` or a `Destination`. 
+`sub-Scopes` and `Destinations` must be added in a `VirtualMap`, which supplies a `Map` given a [`JourneyPlayer`](/docs/dev/journey-agent.md). The internal map is keyed by the value's identifier, and the value is either a `Scope` or a `Destination`.
 
 The motivation for a wrapper around the map is that there may be some cases where the number of items in the map is very large and would require a good deal of time and memory to load. If this is a concern, then you may manually set the `size()` of a `VirtualMap` and leave the actual data in a `Supplier<Map<>>` to only be loaded if the `size()` is small enough to warrant it. In this way, the items in the map will be provided if requested by the user, but the full map will only be loaded and presented to the user in situations where the total set of options should be limited, like for command completion.
 
@@ -59,7 +59,7 @@ Scope myTownScope = Scope.builder()
     /* you don't need a description */
     .destinations(VirtualMap.of(() -> myTown.buildings()
         .stream()
-        .collect(Collectors.toMap(building -> building.id(), 
+        .collect(Collectors.toMap(building -> building.id(),
           building -> Destination.of(journeyBukkit.toCell(building.location()))))))
     .permission("myplugin.town." + myTown.id())  // only let people with town permissions use this scope
     .strict()  // the buildings must be contextualized under this town if anyone wants to use it
@@ -97,7 +97,7 @@ void onEnable() {
         .name(Component.text(myTown.name()))
         .destinations(VirtualMap.of(myTown.buildings()
             .stream()
-            .collect(Collectors.toMap(building -> building.id(), building -> 
+            .collect(Collectors.toMap(building -> building.id(), building ->
               Destination.builder(journeyBukkit.toCell(building.location())
                 .name(Component.text(building.name()))
                 .build())))))
@@ -112,7 +112,7 @@ void onEnable() {
   journey.registerScope(myScope);
 
   // ...
-  
+
 }
 ```
 
