@@ -176,7 +176,7 @@ Potentially uses a lot of space in your database!
 Journey caches previously calculated paths to speed up search times. This command pre-calculates many of these paths and stores them
 so searches may use them instead of calculating them on the fly.
 
-The config parameter [`storage.cache.max_cells`](/docs/admin/config#storage) lets you set how many cells (blocks) you may store in cache
+The config parameter [`storage.cache.max_cells`](/docs/config#storage) lets you set how many cells (blocks) you may store in cache
 before Journey will start to throw out possible cached paths in an effort to save storage space. If storage space isn't an issue and you are hitting that limit,
 go ahead and raise that config value to experience faster search times.
 
@@ -186,7 +186,7 @@ go ahead and raise that config value to experience faster search times.
 
 > Clear all stored cached paths.
 
-See the [`storage.cache.max_cells`](/docs/admin/config#storage) config parameter.
+See the [`storage.cache.max_cells`](/docs/config#storage) config parameter.
 
 - **Permission** - [journey.admin.cache](/docs/permissions#journey-admin-cache)
 
