@@ -1,6 +1,6 @@
 ---
-sidebar_position: 1
-description: 'Manage permission levels on your server'
+sidebar_position: 3
+description: "Manage permission levels on your server"
 ---
 
 # Permissions
@@ -9,7 +9,7 @@ Permissions in Journey are organized by purpose.
 
 ## `journey.cancel` {#journey-cancel}
 
-> Allows the player to cancel searches and paths 
+> Allows the player to cancel searches and paths
 
 [`/journey cancel`](/docs/commands#journey-cancel)
 
@@ -134,3 +134,23 @@ Permissions in Journey are organized by purpose.
 ## `journey.flag.dig` {#journey-flag-dig}
 
 > Allows the subject to use the [dig flag](/docs/commands#dig-flag) on search commands
+
+## `journey.flag.navigator` {#journey-flag-navigator}
+
+> Allows the subject to use the [navigator flag](/docs/commands#navigator-flag) on search commands
+
+## `journey.flag.navigator.trail` {#journey-flag-navigator-trail}
+
+> Allows the subject to use the `trail` navigator with the [navigator flag](/docs/commands#navigator-flag) on search commands
+
+## `journey.flag.navigator.trail.particle` {#journey-flag-navigator-trail-particle}
+
+> Allows the subject to use the `particle` option of the `trail` navigator with the [navigator flag](/docs/commands#navigator-flag) on search commands
+
+## `journey.flag.navigator.trail.width` {#journey-flag-navigator-trail-width}
+
+> Allows the subject to use the `width` option of the `trail` navigator with the [navigator flag](/docs/commands#navigator-flag) on search commands
+
+## `journey.flag.navigator.trail.density` {#journey-flag-navigator-trail-density}
+
+> Allows the subject to use the `density` option of the `trail` navigator with the [navigator flag](/docs/commands#navigator-flag) on search commands

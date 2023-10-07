@@ -1,0 +1,5 @@
+label: Integrations
+position: 5
+link:
+  type: generated-index
+  description: Other plugins use the Journey API to integrate Journey with other popular plugins

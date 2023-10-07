@@ -7,7 +7,8 @@ sidebar_position: 2
 Journey uses the [Mantle Command Framework](https://github.com/whimxiqal/mantle) to handle command execution. As with other Mantle projects, the entire command framework is summarized in one `.gz` file, which can be found [among the source code](https://github.com/whimxiqal/journey/blob/main/common/src/main/antlr/net/whimxiqal/journey/common/Journey.g4).
 
 All commands are split between two base commands:
-1. `/journey` 
+
+1. `/journey`
 2. `/journeyto`
 
 :::tip
@@ -29,8 +30,8 @@ The `name` parameter can optionally be a series of names delineated by colons. T
 
 For example, if you set a personal waypoint called `myhome`, you may "journey" to `myhome` using `/journeyto personal:myhome`. To teleport to a player's location, use `/journeyto player:PlayerName`.
 
-In most cases, if the name of a location is unique among other contexts, you may omit the `scope`. 
-So, in the previous example, you may use `/journeyto myhome`, but only if there are no public waypoints or locations from other contexts called `myhome`. 
+In most cases, if the name of a location is unique among other contexts, you may omit the `scope`.
+So, in the previous example, you may use `/journeyto myhome`, but only if there are no public waypoints or locations from other contexts called `myhome`.
 Similarly, as long as there are no waypoints with the same name as a player, you may journey to a player using just `/journeyto PlayerName`.
 
 Scopes include:
@@ -67,7 +68,7 @@ Scopes include:
 
 ## `/journey waypoint <name> [flags...]` {#journey-waypoint}
 
-> Starts a journey to a personal waypoint 
+> Starts a journey to a personal waypoint
 
 Alternatively, use `/journeyto personal:<name>`.
 
@@ -121,7 +122,7 @@ If no `true` or `false` is specified, it will just toggle the publicity to the o
 
 ## `/journey server waypoint <name> [flags...]` {#journey-server-waypoint}
 
-> Starts a journey to a server waypoint 
+> Starts a journey to a server waypoint
 
 Alternatively, use `/journeyto server:<name>`.
 
@@ -183,7 +184,7 @@ go ahead and raise that config value to experience faster search times.
 
 ## `/journey admin cache paths clear` {#journey-admin-cache-paths-clear}
 
-Clear all stored cached paths. 
+Clear all stored cached paths.
 
 See the [`storage.cache.max_cells`](/docs/admin/config#storage) config parameter.
 
@@ -220,15 +221,15 @@ Furthermore, flags can look like `-<flag_name>` or like `-<flag_name>=<value>`.
 
 > Declares how many seconds the search will take if a solution is never found
 
-- `-timeout=60` - 60 second timeout
-- `-timeout=180` - 180 second timeout
+- `-timeout 60` - 60 second timeout
+- `-timeout 180` - 180 second timeout
 
 ### Animate Flag {#animate-flag}
 
 > Deploys an animation during the search and declares how many milliseconds the search will wait between calculation steps
 
-- `-animate=10` - 10 millisecond delay
-- `-animate=50` - 50 millisecond delay
+- `-animate 10` - 10 millisecond delay
+- `-animate 50` - 50 millisecond delay
 - `-animate` - animates with server default
 
 ### Fly Flag {#fly-flag}
@@ -236,16 +237,16 @@ Furthermore, flags can look like `-<flag_name>` or like `-<flag_name>=<value>`.
 > Decides whether to consider flying as a viable mode of transport, but only if flight is enabled
 
 - `-fly` - toggles the consideration of flight
-- `-fly=true` - considers flight during the search, but only if flight is already enabled
-- `-fly=false` - does not consider flight during the search
+- `-fly true` - considers flight during the search, but only if flight is already enabled
+- `-fly false` - does not consider flight during the search
 
 ### Door Flag {#door-flag}
 
 > Decides whether iron doors should be considered obstructive
 
 - `-door` - toggles the obstructivity of iron doors
-- `-door=true` - considers iron doors obstructive
-- `-door=false` - considers iron doors unobstructive
+- `-door true` - considers iron doors obstructive
+- `-door false` - considers iron doors unobstructive
 
 ### Dig Flag {#dig-flag}
 
@@ -254,5 +255,15 @@ Furthermore, flags can look like `-<flag_name>` or like `-<flag_name>=<value>`.
 In most cases, you probably only want to consider places you can get to without breaking through blocks.
 
 - `-dig` - toggles the consideration of the digging mode
-- `-dig=true` - considers digging a viable mode of transport
-- `-dig=false` - does not consider digging a viable mode of transport
+- `-dig true` - considers digging a viable mode of transport
+- `-dig false` - does not consider digging a viable mode of transport
+
+### Navigator Flag {#navigator-flag}
+
+> Decides which navigator to use
+
+- `-navigator trail`
+
+Some options may be optionally specified along with a navigator type:
+
+- `-navigator trail {<options>}`
