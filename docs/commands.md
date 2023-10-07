@@ -21,7 +21,7 @@ Command arguments surrounded with `<>` are required parameters. Those surrounded
 
 > Starts a journey to a given destination
 
-- **Permission** - [journey.path.[...]](/docs/admin/permissions#journey-path-gui)
+- **Permission** - [journey.path.[...]](/docs/permissions#journey-path-gui)
 - **Arguments**
   - `name`: The name of the destination/waypoint. If no name is given, a GUI will open
   - [`flags...`](#search-flags)
@@ -54,7 +54,7 @@ Scopes include:
 
 > Sets a personal waypoint
 
-- **Permission** - [journey.edit.personal](/docs/admin/permissions#journey-edit-personal)
+- **Permission** - [journey.edit.personal](/docs/permissions#journey-edit-personal)
 - **Arguments**
   - `name`: the name of your new waypoint
 
@@ -62,7 +62,7 @@ Scopes include:
 
 > Lists all your personal waypoints
 
-- **Permission** - [journey.path.personal](/docs/admin/permissions#journey-path-personal)
+- **Permission** - [journey.path.personal](/docs/permissions#journey-path-personal)
 - **Arguments**
   - `page`: the page, for paging across many waypoints
 
@@ -72,7 +72,7 @@ Scopes include:
 
 Alternatively, use `/journeyto personal:<name>`.
 
-- **Permission** - [journey.path.personal](/docs/admin/permissions#journey-path-personal)
+- **Permission** - [journey.path.personal](/docs/permissions#journey-path-personal)
 - **Arguments**
   - `name`: the name of your waypoint
   - [`flags...`](#search-flags)
@@ -81,7 +81,7 @@ Alternatively, use `/journeyto personal:<name>`.
 
 > Removes a personal waypoint
 
-- **Permission** - [journey.edit.personal](/docs/admin/permissions#journey-edit-personal)
+- **Permission** - [journey.edit.personal](/docs/permissions#journey-edit-personal)
 - **Arguments**
   - `name`: the name of your waypoint to remove
 
@@ -89,7 +89,7 @@ Alternatively, use `/journeyto personal:<name>`.
 
 > Renames a personal waypoint to something else
 
-- **Permission** - [journey.edit.personal](/docs/admin/permissions#journey-edit-personal)
+- **Permission** - [journey.edit.personal](/docs/permissions#journey-edit-personal)
 - **Arguments**
   - `name`: the name of your waypoint to change
   - `new name`: the new name of your waypoint
@@ -100,7 +100,7 @@ Alternatively, use `/journeyto personal:<name>`.
 
 If no `true` or `false` is specified, it will just toggle the publicity to the opposite state.
 
-- **Permission** - [journey.edit.personal.publicity](/docs/admin/permissions#journey-edit-personal-publicity)
+- **Permission** - [journey.edit.personal.publicity](/docs/permissions#journey-edit-personal-publicity)
 - **Arguments**
   - `name`: the name of your waypoint
 
@@ -108,7 +108,7 @@ If no `true` or `false` is specified, it will just toggle the publicity to the o
 
 > Sets a server waypoint
 
-- **Permission** - [journey.edit.server](/docs/admin/permissions#journey-edit-server)
+- **Permission** - [journey.edit.server](/docs/permissions#journey-edit-server)
 - **Arguments**
   - `name`: the name of the waypoint
 
@@ -116,7 +116,7 @@ If no `true` or `false` is specified, it will just toggle the publicity to the o
 
 > Lists all the server waypoints
 
-- **Permission** - [journey.path.server](/docs/admin/permissions#journey-path-server)
+- **Permission** - [journey.path.server](/docs/permissions#journey-path-server)
 - **Arguments**
   - `page`: the page, for paging across many waypoints
 
@@ -126,7 +126,7 @@ If no `true` or `false` is specified, it will just toggle the publicity to the o
 
 Alternatively, use `/journeyto server:<name>`.
 
-- **Permission** - [journey.path.server](/docs/admin/permissions#journey-path-server)
+- **Permission** - [journey.path.server](/docs/permissions#journey-path-server)
 - **Arguments**
   - `name`: the name of the waypoint
   - [`flags...`](#search-flags)
@@ -135,7 +135,7 @@ Alternatively, use `/journeyto server:<name>`.
 
 > Removes a server waypoint
 
-- **Permission** - [journey.edit.server](/docs/admin/permissions#journey-edit-server)
+- **Permission** - [journey.edit.server](/docs/permissions#journey-edit-server)
 - **Arguments**
   - `name`: the name of the waypoint to remove
 
@@ -143,7 +143,7 @@ Alternatively, use `/journeyto server:<name>`.
 
 > Renames a server waypoint to something else
 
-- **Permission** - [journey.edit.server](/docs/admin/permissions#journey-edit-server)
+- **Permission** - [journey.edit.server](/docs/permissions#journey-edit-server)
 - **Arguments**
   - `name`: the name of the waypoint to change
   - `new name`: the new name of the waypoint
@@ -153,8 +153,8 @@ Alternatively, use `/journeyto server:<name>`.
 > Starts a journey to a player or, if the name is given, to one of their public waypoints
 
 - **Permissions**
-  - [journey.path.player.entity](/docs/admin/permissions#journey-path-player-entity) (if no waypoint is specified)
-  - [journey.path.player.waypoints](/docs/admin/permissions#journey-path-player-waypoints) (if a waypoint is specified)
+  - [journey.path.player.entity](/docs/permissions#journey-path-player-entity) (if no waypoint is specified)
+  - [journey.path.player.waypoints](/docs/permissions#journey-path-player-waypoints) (if a waypoint is specified)
 - **Arguments**
   - `player`: the name of the online player
   - `name`: the name of the waypoint
@@ -163,7 +163,7 @@ Alternatively, use `/journeyto server:<name>`.
 
 > Begins debug messaging, either for just the target or for everyone if no target is given
 
-- **Permission** - [journey.admin.debug](/docs/admin/permissions#journey-admin-debug)
+- **Permission** - [journey.admin.debug](/docs/permissions#journey-admin-debug)
 - **Arguments**
   - `target`: the online player who has searches from which you want to receive debug information
 
@@ -180,7 +180,7 @@ The config parameter [`storage.cache.max_cells`](/docs/admin/config#storage) let
 before Journey will start to throw out possible cached paths in an effort to save storage space. If storage space isn't an issue and you are hitting that limit,
 go ahead and raise that config value to experience faster search times.
 
-- **Permission** - [journey.admin.cache](/docs/admin/permissions#journey-admin-cache)
+- **Permission** - [journey.admin.cache](/docs/permissions#journey-admin-cache)
 
 ## `/journey admin cache paths clear` {#journey-admin-cache-paths-clear}
 
@@ -188,7 +188,7 @@ go ahead and raise that config value to experience faster search times.
 
 See the [`storage.cache.max_cells`](/docs/admin/config#storage) config parameter.
 
-- **Permission** - [journey.admin.cache](/docs/admin/permissions#journey-admin-cache)
+- **Permission** - [journey.admin.cache](/docs/permissions#journey-admin-cache)
 
 ## `/journey admin cache portals clear` {#journey-admin-cache-portals-clear}
 
@@ -201,7 +201,7 @@ You should never have to do this!
 Journey keeps an internal cache of all portal connections. These are added and updated as players usem, so this command is only needed if something breaks.
 Use the [`admin listportals` command](#journey-admin-listportals) to see what portals currently are known to Journey.
 
-- **Permission** - [journey.admin.cache](/docs/admin/permissions#journey-admin-cache)
+- **Permission** - [journey.admin.cache](/docs/permissions#journey-admin-cache)
 
 ## `/journey admin listportals [page]` {#journey-admin-listportals}
 
